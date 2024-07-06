@@ -11,8 +11,8 @@ function forex_rates_enqueue_scripts() {
 
     if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'forex_rates')) {
         // Enqueue DataTables scripts and styles
-        wp_enqueue_style('datatables-css', plugins_url('/assets/css/jquery.dataTables.min.css', __FILE__), array(), '2.0.8');
-        wp_enqueue_script('datatables-js', plugins_url('/assets/js/jquery.dataTables.min.js', __FILE__), array('jquery'), '2.0.8', true);
+        wp_enqueue_style('datatables-css', plugins_url('/assets/css/dataTables.min.css', __FILE__), array(), '2.0.8');
+        wp_enqueue_script('datatables-js', plugins_url('/assets/js/dataTables.min.js', __FILE__), array('jquery'), '2.0.8', true);
     }
 }
 add_action('wp_enqueue_scripts', 'forex_rates_enqueue_scripts');
